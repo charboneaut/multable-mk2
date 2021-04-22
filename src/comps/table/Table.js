@@ -1,7 +1,8 @@
-import { createHeading } from "./helpers";
+import { createHeading } from "../../helpers";
 import { v4 } from "uuid";
 import { Table as BootstrapTable } from "react-bootstrap";
 import { Container } from "react-bootstrap";
+import Cell from "../cell/Cell";
 
 function Table(props) {
   let count = -1;
@@ -22,8 +23,14 @@ function Table(props) {
             return (
               <tr key={v4()}>
                 <td key={v4()}>{count}</td>
-                {row.map((num) => (
-                  <td key={v4()}>{num}</td>
+                {row.map((numObj) => (
+                  <Cell
+                    num={numObj.num}
+                    factorI={numObj.factorI}
+                    factorK={numObj.factorK}
+                    mode={props.mode}
+                    key={v4()}
+                  />
                 ))}
               </tr>
             );

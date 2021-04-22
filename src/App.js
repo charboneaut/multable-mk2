@@ -1,8 +1,8 @@
 import "./App.css";
 import { useState } from "react";
-import Controls from "./Controls";
-import Table from "./Table";
-import { tableCalc } from "./tableCalc";
+import Controls from "./comps/controls/Controls";
+import Table from "./comps/table/Table";
+import { tableCalc } from "./comps/table/tableCalc";
 
 function App() {
   const [maxW, setW] = useState(5);
@@ -24,7 +24,7 @@ function App() {
         maxW={maxW}
         maxH={maxH}
       />
-      <Table maxW={maxW} table={table} />
+      <Table maxW={maxW} table={table} mode={mode} />
     </>
   );
 }

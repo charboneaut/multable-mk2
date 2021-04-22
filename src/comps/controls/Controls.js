@@ -69,7 +69,7 @@ function Controls(props) {
               </Dropdown.Item>
               <OverlayTrigger
                 overlay={opPopover}
-                trigger="hover"
+                trigger={"hover"}
                 placement="right"
               >
                 <div
