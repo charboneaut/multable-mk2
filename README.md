@@ -1,3 +1,5 @@
+deployment: https://multable-mk2.vercel.app/
+
 this is my take on the notorious q1 multiplication table assessment
 
 it should be able to
